@@ -1,4 +1,4 @@
-# Fuel Inventory Management System & Variance Checker ⛽
+# ⛽ Fuel Inventory Management System & Variance Checker 
 
 A high-performance, lightweight single-page application (SPA) built for retail fuel station operations in the Philippines. This system handles real-time wet stock reconciliation, Philippine Suggested Retail Price (Ph-SRP) financial auditing, and automated Underground Storage Tank (UST) priority order forecasting.
 
