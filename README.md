@@ -43,7 +43,7 @@ E_monetary = (I_physical - I_expected) * P_SRP
 Because this application is a pure client-side SPA, you can run it directly in your browser without any backend dependencies:
 
 1. Clone the repository:
-git clone https://github.com/jomerbiason/fuel-inventory-management-system-and-varicance-checker.git
+git clone https://github.com/jomerbiason/fuel-inventory-management-system-and-variance-checker.git
 
 2. Open the project:
 Simply open index.html in your favorite web browser (Chrome, Edge, or Firefox).
