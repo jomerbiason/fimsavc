@@ -1,37 +1,60 @@
-# Enterprise Station Fuel IMS & Forecasting Dashboard
+# Fuel Inventory Management System & Variance Checker ⛽
 
-An industry-standard, single-file **Fuel Inventory Management System (IMS)**, **Financial Variance Auditor**, and **Underground Storage Tank (UST) Order Forecaster**. This system is specifically engineered to map onto real-world fuel retail environments—featuring localized support for Philippine Suggested Retail Price (SRP) cycles ("Tuesday Adjustments") and strict wet-stock discrepancy thresholds.
+A high-performance, lightweight single-page application (SPA) built for retail fuel station operations in the Philippines. This system handles real-time wet stock reconciliation, Philippine Suggested Retail Price (Ph-SRP) financial auditing, and automated Underground Storage Tank (UST) priority order forecasting.
 
-Built completely using modern vanilla web technologies (**HTML5**, **CSS3 Custom Properties**, and **ES6 JavaScript**) with `localStorage` persistence and full offline utility.
-
----
-
-## 🚀 Live Features
-
-* **⚡ Real-Time Tank Asset Monitor:** Visually tracks active volume capacities against safe operational levels with dynamic progression gauges.
-* **⛽ Live SRP Board Price Configuration:** Allows immediate overriding of fuel rates to reconcile calculations accurately against the standard Philippine Tuesday morning market adjustments.
-* **📊 Shift Reconciliation Engine:** Automates daily closing book audits by cross-referencing computer terminal logs with physical dipstick verifications.
-* **⚠️ Smart Priority Forecasting:** Automatically alerts managers when fuel volumes fall below the standard **30% safety threshold** to prevent pump line debris clogging and operational dry-outs.
-* **📈 Built-In Compliance Audit Ledger:** Generates instant flags for any volumetric variance exceeding **0.5%** of throughput capacity.
-* **💾 Local Storage & CSV Exporting:** Features immediate caching across system reboots along with standard tabular data downloading (.CSV formatting) for external report routing.
+## 🚀 Live Demo
+Access the live dashboard here:
+https://jomerbiason.github.io/fuel-inventory-management-system-and-variance-checker/
 
 ---
 
-## 🛠️ The Operational Context (Ph-SRP Framework)
+## 🗺️ Local Market Context: "Tuesday Adjustments"
+In the Philippine downstream oil industry, fuel pricing follows a structured routine:
 
-This software framework matches the strict logistics workflow practiced across national service stations (e.g., Shell, Petron, Caltex, CleanFuel):
+1. Monday Afternoon: Oil firms announce nationwide price hikes or rollbacks.
+2. Tuesday Morning (6:00 AM): These pricing updates officially go live.
 
-### 1. The Tuesday Price Adjustment Cycle
-In the Philippines, oil terminal networks announce downstream market rate movements every Monday afternoon. These structured price shifts take legal effect on the pumps exactly at **6:00 AM on Tuesday**. This dashboard provides a targeted **SRP Board Configuration Panel** that lets operations managers load incoming values overnight, preserving book asset accuracy before morning shifts clock in.
+This application is built directly into that operational workflow. Station managers configure the price matrix during the pre-dawn hours on Tuesday. Once saved, the transaction system instantly tracks variances and asset sheets against the true running pump rates for that shift cycle.
 
-### 2. Physical Wet Stock Discrepancy Auditing
-Fuel is volatile; thermal shifts, tank sludging, and high-pressure nozzle deliveries cause natural shrinkage. By processing physical dip values against virtual ledger counts, the **Shift Reconciliation Input** catches variance leaks early and evaluates their direct monetary loss (₱) against active pump rates.
+## 🛠️ Key System Features
+* Wet Stock Audit Engine: Cross-examines computer sales against manual physical dipstick readings.
+* 0.5% Industry Standard Safeguard: Automatically flags inventory discrepancies as CRITICAL if they exceed the industry-standard 0.5% volumetric threshold.
+* Historical Price Lock: Historic transactions retain their exact pricing metrics to protect financial auditing records from retrospective drift.
+* UST Forecasting: Real-time progress bars provide visual alerts. If tanks drop to or below 30% capacity, the system triggers a Priority Order Alert.
+* GitHub Pages Ready: Fully optimized for static hosting via GitHub Pages.
 
 ---
 
-## 📂 File Structure & Tech Stack
+## 📐 Mathematical Blueprint
 
-The entire software solution is contained within an optimized, componentized architecture embedded inside a singular workspace file for trivial field deployment:
+### Daily Book Inventory Balance
+The expected book stock is calculated as:
+I_expected = (I_opening + V_delivery) - V_sales
 
-```bash
-├── index.html     # Application Core (UI layout, Theme Engine, Calculation Script)
+### Variance Monetary Evaluation
+The financial impact is determined by:
+E_monetary = (I_physical - I_expected) * P_SRP
+
+(Where P_SRP is the immutable board rate at the time of the transaction)
+
+---
+
+## 🚀 How to Run Locally
+Because this application is a pure client-side SPA, you can run it directly in your browser without any backend dependencies:
+
+1. Clone the repository:
+git clone https://github.com/jomerbiason/fuel-inventory-management-system-and-varicance-checker.git
+
+2. Open the project:
+Simply open index.html in your favorite web browser (Chrome, Edge, or Firefox).
+
+3. Deploying to GitHub Pages:
+If you make changes, simply push your code to the main branch. GitHub Actions will automatically redeploy your updates to your live link.
+
+---
+
+## 📋 Data Persistence
+This system uses browser localStorage. Your data is private and saved locally on your machine. You can export your audit logs at any time using the "Export Audit Sheet (.CSV)" button within the application.
+
+## ⚖️ License
+Distributed under the MIT License.
