@@ -3,9 +3,9 @@
 A high-performance, lightweight single-page application (SPA) built for retail fuel station operations in the Philippines. This system handles real-time wet stock reconciliation, Philippine Suggested Retail Price (Ph-SRP) financial auditing, and automated Underground Storage Tank (UST) priority order forecasting.
 
 ## 🚀 Live Demo
-Access the live dashboard here:
-https://jomerbiason.github.io/fuel-inventory-management-system-and-variance-checker/
+[**Access the Fuel Management Dashboard**](https://jomerbiason.github.io/fuel-inventory-management-system-and-variance-checker/)
 
+---
 ## 🗺️ Local Market Context: "Tuesday Adjustments"
 In the Philippine downstream oil industry, fuel pricing follows a structured routine:
 
