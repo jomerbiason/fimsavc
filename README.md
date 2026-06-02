@@ -5,7 +5,6 @@ A high-performance, lightweight single-page application (SPA) built for retail f
 ## 🚀 Live Demo
 [**Access the Fuel Management Dashboard**](https://jomerbiason.github.io/fuel-inventory-management-system-and-variance-checker/)
 
----
 ## 🗺️ Local Market Context: "Tuesday Adjustments"
 In the Philippine downstream oil industry, fuel pricing follows a structured routine:
 
